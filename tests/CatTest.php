@@ -14,7 +14,7 @@ class CatTest extends PHPUnit_Framework_TestCase
 	}
 	
 	
-	function testTalk() {
+	public function testTalk() {
 		// Call the talkfunction
 		$expectedvoice = 'meow!';
 		$voice = $this->tomcat->talk();
