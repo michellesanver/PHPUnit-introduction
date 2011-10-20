@@ -1,30 +1,30 @@
 <?php
 
 require_once 'PHPUnit/AutoLoad.php';
-require_once '../cat.php';
+require_once '../user.php';
 
-class CatTest extends PHPUnit_Framework_TestCase
+class UserTest extends PHPUnit_Framework_TestCase
 {
-	protected $tomcat;
+	protected $user;
 	
-	// Setup the tomcat
+	// Setup Tom
 	protected function setUp() {
-		$this->tomcat = new Cat();
-		$this->tomcat->setName('Tom');
+		$this->user = new User();
+		$this->user->setName('Tom');
 	}
 	
 	
 	public function testTalk() {
 		// Call the talkfunction
-		$expectedvoice = 'meow!';
-		$voice = $this->tomcat->talk();
+		$expectedvoice = 'Hello World!';
+		$voice = $this->user->talk();
 	
 		// To ensure the voice is what we expect we use “assertEquals”
 		$this->assertEquals($expectedvoice, $voice);
 	}
 	
-	// Tear down the cat! 
+	// Tear down Tom! 
 	protected function tearDown() {
-		unset($this->tomcat);
+		unset($this->user);
 	}
 }

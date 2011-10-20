@@ -1,7 +1,7 @@
 <?php
 
-// This is a simple testclass. A talking cat. :)
-class Cat {
+// This is a simple testclass. A user saying 'Hello World'. :)
+class User {
 	protected $name;
 
 	public function getName() {
@@ -13,6 +13,6 @@ class Cat {
 	}
 
 	public function talk() {
-		return 'meow!';
+		return 'blubb';
 	}
 }
